@@ -22,8 +22,6 @@ def get_majority_element(a, left, right):
             Rcount += 1
     if Rcount > (right - left) // 2:
         return right_element
-
-
     return -1
 
 

@@ -1,20 +1,32 @@
 # Uses python3
 import sys
+"""
+def fibonacci_sum_naive(n):
+    if n <= 1:
+        return n
 
+    previous = 0
+    current  = 1
+    sum1      = 1
+
+    for _ in range(n - 1):
+        previous, current = current, (previous + current)%10
+        sum1 = (sum1 + current)%10
+
+    return sum1 % 10
+"""
 def fibonacci_last_digit_sum(n):
-    sum = 0
-    prev , curr = 0 , 1
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    for i in range(n):
-        prev , curr = curr , (prev + curr)%10
-        sum = (sum + curr) % 10
-    return sum + 1
-
-print(fibonacci_last_digit_sum(239))
-#print(fibonacci_last_digit_sum( 613455))
+    period = 60
+    index = n%period
+#     print(index)
+    if index<1:
+        return index
+    prev,curr = 0,1
+    sum1      = 1
+    for i in range(2, index+1):
+        prev,curr = curr, (curr+prev)%10
+        sum1 = (sum1 + curr)%10
+    return sum1
 
 
 if __name__ == '__main__':
