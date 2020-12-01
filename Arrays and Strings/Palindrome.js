@@ -14,14 +14,6 @@
 			* Use hashtable you should be able to get it down to O(N).
 			* Can you reduce the space usage by using a space vector.
 */
-
-
-
-
-
-//Map each character to a number a -> 0, b -> 1, c -> 2 etc. . No-letter charcter maps to -1.
-
-
 function palindrome(str){
 	//Count how many time each character appear.
 	var counts = {};
@@ -50,8 +42,4 @@ function palindrome2(str){
 	return lowStr === reverseStr;
 }
 
-function 
-
-
-
-console.log(palindrome2("Aks"));
+//console.log(palindrome2("Aks"));
